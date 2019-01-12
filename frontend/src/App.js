@@ -1,28 +1,37 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom'
+
+import Posts from './Posts'
+import PostForm from './PostForm'
+import PostDelete from './PostDelete'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      <Router>
+        <div>
+          <Route exact path='/' component={Posts} />
+          <Route exact path='/posts' component={Posts} />
+          <Route exact path='/posts/new' component={PostForm} />
+          <Route
+            exact path="/posts/:id/edit"
+            render={(routeProps) => (
+              <PostForm {...routeProps} />
+            )}
+          />
+          <Route
+            exact path="/posts/:id/delete"
+            render={(routeProps) => (
+              <PostDelete {...routeProps} />
+            )}
+          />
+        </div>
+      </Router>
+    )
   }
 }
 
-export default App;
+export default App
