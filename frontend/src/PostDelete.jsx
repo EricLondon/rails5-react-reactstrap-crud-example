@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Redirect } from 'react-router'
+import { Redirect } from 'react-router'
 
 const Api = require('./Api.js')
 class PostDelete extends Component {
@@ -15,7 +15,7 @@ class PostDelete extends Component {
   componentDidMount() {
     Api.deletePost(this.state.id)
       .then(response => {
-        const [error, errors] = response
+        const [error] = response
         if (error) {
           // TODO: set flash
         }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Route, Redirect } from 'react-router'
-import { Container, Row, Col, Alert, Table, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
+import { Redirect } from 'react-router'
+import { Container, Row, Col, Alert, Button, Form, FormGroup, Label, Input } from 'reactstrap'
 
 const Api = require('./Api.js')
 

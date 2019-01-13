@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import { Container, Row, Col, Alert, Table, Button } from 'reactstrap'
+import { Link } from "react-router-dom"
+import { Container, Row, Col, Alert } from 'reactstrap'
 import PostsTable from './PostsTable'
 
 const Api = require('./Api.js')

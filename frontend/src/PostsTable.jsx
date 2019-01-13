@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import { Table, Button } from 'reactstrap'
+import { Link } from "react-router-dom"
+import { Table } from 'reactstrap'
 
 class PostsTable extends Component {
   constructor(props) {
