@@ -8,7 +8,7 @@
     "react-dom": "^16.13.0",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
-    "reactstrap": "^8.10.1"
+    "reactstrap": "^9.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
